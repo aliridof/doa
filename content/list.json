@@ -1,0 +1,16 @@
+[
+    {
+        "id": "1",
+        "title": "Ratib Al-Attas",
+        "desc": "Disusun oleh Al-Habib Umar bin Abdurrahman Al-Attas.",
+        "tag": "LENGKAP",
+        "file": "ratib-alattas.json"
+    },
+    {
+        "id": "2",
+        "title": "Ratib Al-Haddad",
+        "desc": "Disusun oleh Al-Habib Abdullah bin Alwi Al-Haddad.",
+        "tag": "POPULER",
+        "file": "ratib-alhaddad.json"
+    }
+]
