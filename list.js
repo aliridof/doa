@@ -1,26 +1,22 @@
 /**
  * list.js
- * Berisi daftar doa yang akan tampil di halaman utama (Beranda).
- * id      : ID unik (harus sesuai dengan dataVar)
- * title   : Judul yang tampil di kartu
- * desc    : Keterangan singkat
- * tag     : Label status (Lengkap/Populer dll)
- * dataVar : Nama variabel array data yang ada di file isi doa masing-masing
+ * File ini berfungsi sebagai katalog menu di halaman utama.
+ * Pastikan properti 'dataVar' sama persis dengan nama variabel di file data masing-masing.
  */
 
 const PRAYER_LIST = [
     {
         id: "ratib-alattas",
         title: "Ratib Al-Attas",
-        desc: "Karya Al-Habib Umar bin Abdurrahman Al-Attas (Lengkap 31 Bagian).",
-        tag: "VER 1.0",
-        dataVar: "RATIB_ALATTAS_DATA"
+        desc: "Zikir lengkap karya Al-Habib Umar bin Abdurrahman Al-Attas (31 Bagian).",
+        tag: "LENGKAP",
+        dataVar: "RATIB_ALATTAS_DATA" // Merujuk ke variabel di ratib-alattas.js
     },
     {
         id: "ratib-alhaddad",
         title: "Ratib Al-Haddad",
-        desc: "Zikir utama karya Al-Imam Al-Habib Abdullah bin Alwi Al-Haddad (Lengkap 32 Bagian).",
-        tag: "VER 1.0",
-        dataVar: "RATIB_ALHADDAD_DATA"
+        desc: "Zikir utama karya Al-Imam Al-Habib Abdullah bin Alwi Al-Haddad (32 Bagian).",
+        tag: "LENGKAP",
+        dataVar: "RATIB_ALHADDAD_DATA" // Merujuk ke variabel di ratib-alhaddad.js
     }
 ];
