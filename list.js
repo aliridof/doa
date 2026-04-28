@@ -21,6 +21,6 @@ const PRAYER_LIST = [
         title: "Ratib Al-Haddad",
         desc: "Zikir utama karya Al-Imam Al-Habib Abdullah bin Alwi Al-Haddad (Lengkap 32 Bagian).",
         tag: "VER 1.0",
-        dataVar: "ratib-alhaddad.js"
+        dataVar: "RATIB_ALHADDAD_DATA"
     }
 ];
