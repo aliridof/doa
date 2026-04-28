@@ -1,192 +1,160 @@
-```json
+json
 [
   {
-    "nomer": 1,
-    "ar": "الْفَاتِحَة إِلَى حَضْرَةِ سَيِّدِنَا وَحَبِيبِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَصَحْبِهِ وَسَلَّمَ، وَ إِلَى رُوحِ سَيِّدِنَا الْحَبِيبِ عُمَرِ بِنْ عَبْدِ الرَّحْمَانِ الْعَطَّاسِ ، صَاحِبِ الرَّاتِبِ، وَالشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللَّهِ بَارَاسُ، وَإِلى رُوحِ سَيِّدِنَا الْإِمَامِ الْحَبِيبِ أَحْمَددِ بِنْ حَسَنِ بِنِ عَبْدِ اللَّهِ الْعَطَّاسِ، الْفَاتِحَة",
+    "ar": "الْفَاتِحَة إِلَى حَضْرَةِ سَيِّدِنَا وَحَبِيبِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَصَحْبِهِ وَسَلَّمَ، وَ إِلَى رُوحِ سَيِّدِنَا الْحَبِيبِ عُمَرِ بِنْ عَبْدِ الرَّحْمَانِ الْعَطَاسِ ، صَاحِبِ الرَّاتِبِ، وَالشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللَّهِ بَارَاسُ، وَإِلى رُوحِ سَيِّدِنَا الْإِمَامِ الْحَبِيبِ أَحْمَددِ بِنْ حَسENِ بِنِ عَبْدِ اللَّهِ الْعَطَاسِ، الْفَاتِحَة",
     "lat": "Al-Fatiha ilā hadrati Sayyidinā wa Habībinā Muhammadin şalla Llāhu 'alayhi wa alihi wa şahbihi wa sallam, wa ilā rūķi Sayyidina l-Habībi 'Umari bni 'Abdi r-Rahmāni l-'Attās, Şahibi r-Rātib, wa sh-Shaykh 'Alī bni 'Abdi Llāhi Bā Rās, wa ilā rūķi Sayyidina l-Imāmi l-Habībi Ahmadi bni Hasani bni 'Abdi Llāhi l-'Attās, al-Fatiha.",
-    "id": "Al-Fatihah kepada Baginda Nabi Muhammad ﷺ, serta kepada ruh Al-Habib Umar bin Abdurrahman Al-Attas (penyusun Ratib), Syekh Ali bin Abdullah Baras, dan Al-Habib Ahmad bin Hasan bin Abdullah Al-Attas."
+    "id": "1. Tawassul Pembuka"
   },
   {
-    "nomer": 2,
-    "ar": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. الرَّحْمَنِ الرَّحِيمِ. مَلِكِ يَوْمِ الدِّينِ. إِيَّاكِ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ. اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ. صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
-    "lat": "Bismi Llāhi r-Rahmāni r-Rahīm, Al-hamdu li Llāhi Rabbi l-'ālamīn, ar-Rahmāni r-Rahīm, Māliki yawmi d-dīn, iyyāka na'budu wa iyyāka nasta'īn, ihdinā ş-şirāţa l-mustaqim, şirāţa lladhīna an'amta 'alayhim ghayri l-maghdūbi 'alayhim wa la d-dāllīn.",
-    "id": "Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang. Segala puji bagi Allah, Tuhan semesta alam... (Surah Al-Fatihah)"
+    "ar": "بِسْمِ اللهِ الرَّحْمَنِ REحِيمِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ الرَّحْمَنِ REحِيمِ * مَلِكِ يَوْمِ الدِّينِ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ * صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ",
+    "lat": "Bismi Llāhi r-Rahmāni r-Rahīm, Al-hamdu li Llāhi Rabbi l-'ālamīn, ar-Rahmāni r-Rahīm, Māliki yawmi d-dīn, iyyāka na budu wa iyyāka nasta în, ihdină ş-şirāța l-mustaqim, şirāța lladhīna an amta 'alayhim ghayri l-maghdūbi 'alayhim wa la d-dāllīn.",
+    "id": "2. Surah Al-Fatihah"
   },
   {
-    "nomer": 3,
-    "ar": "أَعُوذُ بِاللهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّحِيمِ (۳×)",
-    "lat": "Aʻūdhu bi-Llāhi s-Samīʻi l-'Alīmi mina sh-Shayțāni r-Rajīm. (x3)",
-    "id": "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan setan yang terkutuk."
+    "ar": "أَعُوذُ بِاللهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ REجِيمِ",
+    "lat": "Aʻūdhu bi-Llāhi s-Samīʻi l-'Alīmi mina sh-Shayțāni r-Rajīm. (3x)",
+    "id": "3. Perlindungan (3x)"
   },
   {
-    "nomer": 4,
-    "ar": "لَوْ أَنزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ. هُوَ اللهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ",
+    "ar": "لَوْ أَنزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ * هُوَ اللهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ REحْمَنُ REحِيمُ",
     "lat": "Lo anzalnā hādha l-Qur'ana 'alā jabalin la ra'aytahu khāshi'an mutasaddi'an min khashyati Llāhi wa tilka l-amthālu nadribuhā li n-nāsi laʻallāhum yatafakkarūn, Huwa Llāhu lladhī lā ilāha illā Huwa 'Alimu l-ghaybi wa shahādati Huwa r-Rahmānu r-Rahīm.",
-    "id": "Sekiranya Kami turunkan Al-Qur'an ini kepada sebuah gunung, niscaya kamu akan melihatnya tunduk terpecah-belah disebabkan takut kepada Allah... (Al-Hasyr: 21-22)"
+    "id": "4. Surah Al-Hashr: 21-22"
   },
   {
-    "nomer": 5,
-    "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ. هُوَ اللهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَواتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
+    "ar": "هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ * هُوَ اللهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَواتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ",
     "lat": "Huwa Llāhu lladhī lā ilaha illä Huwa l-Maliku l-Quddūsu s-Salāmu l-Mu'minu l-Muhayminu l-'Azīzu l-Jabbāru l-Mutakabbir, Subhāna Llāhi 'ammā yushrikūn, Huwa Llāhu l-Khāliqu l-Bāri'u l-Muşawwiru lahu l-Asmā'u l-Husnā yusabbiņu lahu mā fi s-samāwāti wa l-ardi wa Huwa l-'Azīzu l-Hakīm.",
-    "id": "Dialah Allah tidak ada Tuhan selain Dia. Maharaja, Yang Maha Suci, Yang Maha Sejahtera... (Al-Hasyr: 23-24)"
+    "id": "5. Surah Al-Hashr: 23-24"
   },
   {
-    "nomer": 6,
-    "ar": "أَعُوذُ بِاللهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ (۳×)",
-    "lat": "A'ūdhu bi-Llāhi s-Samīʻi l-'Alīmi mina sh-Shayțāni r-Rajīm. (x3)",
-    "id": "Aku berlindung kepada Allah Yang Maha Mendengar lagi Maha Mengetahui dari godaan setan yang terkutuk."
+    "ar": "أَعُوذُ بِاللهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ REجِيمِ",
+    "lat": "A'ūdhu bi-Llāhi s-Samīʻi l-'Alīmi mina sh-Shayțāni r-Rajīm. (3x)",
+    "id": "6. Perlindungan (3x)"
   },
   {
-    "nomer": 7,
-    "ar": "أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ (۳×)",
-    "lat": "A'ūdhu bi kalimāti Llāhi t-tāmmāti min sharri mā khalaq. (x3)",
-    "id": "Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan makhluk yang diciptakan-Nya."
+    "ar": "أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+    "lat": "A'ūdhu bi kalimāti Llāhi t-tāmmāti min sharri mā khalaq. (3x)",
+    "id": "7. Kalimat Perlindungan (3x)"
   },
   {
-    "nomer": 8,
-    "ar": "بِسْمِ اللهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ (۳×)",
-    "lat": "Bismi Llāhi lladhī lā yadurru maʻa-smihi shay'un fi l-ardi wa lā fi s-samā'i wa Huwa s-Samīʻu l-'Alīm. (x3)",
-    "id": "Dengan nama Allah yang bila disebut, segala sesuatu di bumi dan langit tidak akan berbahaya, Dia Maha Mendengar lagi Maha Mengetahui."
+    "ar": "بِسْمِ اللهِ الَّذِي لَا يَضُرُّ معَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    "lat": "Bismi Llāhi lladhī lā yadurru maʻa-smihi shay'un fi l-ardi wa lā fi s-samā'i wa Huwa s-Samīʻu l-'Alīm. (3x)",
+    "id": "8. Nama Allah (3x)"
   },
   {
-    "nomer": 9,
-    "ar": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِي الْعَظِيمِ (۱۰×)",
-    "lat": "Bismi Llāhi r-Rahmāni r-Rahīm, Wa la hawla wa lā quwwata illā bi-Llāhi l-'Aliyyi l-'Azīm. (x10)",
-    "id": "Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang. Tiada daya dan kekuatan kecuali dengan Allah Yang Maha Tinggi lagi Maha Agung."
+    "ar": "بِسْمِ اللهِ REحْمَنِ REحِيمِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِي الْعَظِيمِ",
+    "lat": "Bismi Llāhi r-Rahmāni r-Rahīm, Wa la hawla wa lā quwwata illā bi-Llāhi l-'Aliyyi l-'Azīm. (10x)",
+    "id": "9. Hawqalah (10x)"
   },
   {
-    "nomer": 10,
-    "ar": "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ (۳×)",
-    "lat": "Bismi Llāhi r-Rahmāni r-Rahīm. (x3)",
-    "id": "Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang."
+    "ar": "بِسْمِ اللهِ REحْمَنِ REحِيمِ",
+    "lat": "Bismi Llāhi r-Rahmāni r-Rahīm. (3x)",
+    "id": "10. Basmalah (3x)"
   },
   {
-    "nomer": 11,
-    "ar": "بِسْمِ اللَّهِ تَحَصَّنَّا بِاللَّهِ، بِسْمِ اللَّهِ تَوَكَّلْنَا عَلَى اللهِ (۳×)",
-    "lat": "Bismi Llāhi tahaşşannā bi-Llāhi, Bismi Llāhi tawakkalnā Alallah. (x3)",
-    "id": "Dengan nama Allah kami membentengi diri dengan Allah, dengan nama Allah kami bertawakal kepada Allah."
+    "ar": "بِسْمِ اللَّهِ تَحَصَّنَّا بِاللَّهِ بِسْمِ اللَّهِ تَوَكَّلْنَا عَلَى اللهِ",
+    "lat": "Bismi Llāhi tahaşşannā bi-Llāhi, Bismi Llāhi tawakkalnā Alallah. (3x)",
+    "id": "11. Tahassun (3x)"
   },
   {
-    "nomer": 12,
-    "ar": "بِسْمِ اللَّهِ آمَنَّا بِاللَّهِ وَمَنْ يُؤْمِنْ بِاللَّهِ لَا خَوْفٌ عَلَيْهِ (۳×)",
-    "lat": "Bismi Llāhi āmannā bi-Llāhi wa man yu'min bi-Llāhi lā khawfun 'alayhi. (x3)",
-    "id": "Dengan nama Allah kami beriman kepada Allah, dan barangsiapa beriman kepada Allah maka tiada ketakutan baginya."
+    "ar": "بِسْمِ اللَّهِ آمَنَّا بِاللَّهِ وَمَنْ يُؤْمِنْ بِاللَّهِ لَا خَوْفٌ عَلَيْهِ",
+    "lat": "Bismi Llāhi āmannā bi-Llāhi wa man yu'min bi-Llāhi lā khawfun 'alayhi. (3x)",
+    "id": "12. Iman (3x)"
   },
   {
-    "nomer": 13,
-    "ar": "سُبْحَانَ اللَّهِ عَزَّ اللَّهُ، سُبْحَانَ اللهِ جَلَّ اللَّهُ (۳×)",
-    "lat": "Subhāna Llāhi 'azza Llāh, Subhāna Llāhi jalla Llāh. (x3)",
-    "id": "Maha Suci Allah, Maha Perkasa Allah. Maha Suci Allah, Maha Agung Allah."
+    "ar": "سُبْحَانَ اللَّهِ عَزَّ اللَّهُ سُبْحَانَ اللهِ جَلَّ اللَّهُ",
+    "lat": "Subhāna Llāhi 'azza Llāh, Subhāna Llāhi jalla Llāh. (3x)",
+    "id": "13. Tasbih (3x)"
   },
   {
-    "nomer": 14,
-    "ar": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ (۳×)",
-    "lat": "Subhāna Llāhi wa bi hamdihi, Subhāna Llāhi l-'Azīm. (x3)",
-    "id": "Maha Suci Allah dengan segala puji bagi-Nya, Maha Suci Allah Yang Maha Agung."
+    "ar": "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ",
+    "lat": "Subhāna Llāhi wa bi hamdihi, Subhāna Llāhi l-'Azīm. (3x)",
+    "id": "14. Tasbih & Hamdalah (3x)"
   },
   {
-    "nomer": 15,
-    "ar": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ (٤×)",
-    "lat": "Subhāna Llāhi wa l-hamdu li-Llāhi, wa la ilaha illa Llāhu wa Llahu Akbar. (x4)",
-    "id": "Maha Suci Allah, segala puji bagi Allah, tiada Tuhan selain Allah, dan Allah Maha Besar."
+    "ar": "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
+    "lat": "Subhāna Llāhi wa l-hamdu li-Llāhi, wa la ilaha illa Llāhu wa Llahu Akbar. (4x)",
+    "id": "15. Tahlil & Takbir (4x)"
   },
   {
-    "nomer": 16,
-    "ar": "يَا لَطِيفًا بِخَلْقِهِ يَا عَلِيمًا بِخَلْقِهِ يَا خَبِيرًا بِخَلْقِهِ الْطُفْ بِنَا يَا لَطِيفُ يَا عَلِيمُ يَا خَبِيرُ (۳×)",
-    "lat": "Yā Laţīfan bi khalqihi Yā 'Alīman bi khalqihi Yã Khabīran bi khalqihi ulțuf binā Yā Laţīfu Yā 'Alīmu Ya Khabīr. (x3)",
-    "id": "Wahai Yang Lembut kepada makhluk-Nya, Wahai Yang Mengetahui makhluk-Nya, Wahai Yang Mengenal makhluk-Nya, bersikap lembutlah kepada kami..."
+    "ar": "يَا لَطِيفًا بِخَلْقِهِ يَا عَلِيمًا بِخَلْقِهِ يَا خَبِيرًا بِخَلْقِهِ الْطُفْ بِنَا يَا لَطِيفُ يَا عَلِيمُ يَا خَبِيرُ",
+    "lat": "Yā Laţīfan bi khalqihi Yā 'Alīman bi khalqihi Yã Khabīran bi khalqihi ulțuf binā Yā Laţīfu Yā 'Alīmu Ya Khabīr. (3x)",
+    "id": "16. Ya Latif (3x)"
   },
   {
-    "nomer": 17,
-    "ar": "يا لَطِيفًا لَمْ يَزَلْ الْطُفْ بِنَا فِيمَا نَزَلْ إِنَّكَ لَطِيفٌ لَمْ تَزَلْ الْطُفْ بِنَا وَالْمُسْلِمِينَ (۳×)",
-    "lat": "Yā Laţīfan lam yazal ulțuf binā fīmā nazal innaka Lațīfun lam tazal ulțuf binā wa l-Muslimīn. (x3)",
-    "id": "Wahai Yang Maha Lembut yang tiada henti, berilah kelembutan kepada kami pada apa yang telah turun..."
+    "ar": "يا لَطِيفًا لَمْ يَزَلْ الْطُفْ بِنَا فِيمَا نَزَلْ إِنَّكَ لَطِيفٌ لَمْ تَزَلْ الْطُفْ بِنَا وَالْمُسْلِمِينَ",
+    "lat": "Yā Laţīfan lam yazal ulțuf binā fīmā nazal innaka Lațīfun lam tazal ulțuf binā wa l-Muslimīn. (3x)",
+    "id": "17. Ya Latifan lam yazal (3x)"
   },
   {
-    "nomer": 18,
-    "ar": "لَا إِلَهَ إِلَّا اللَّهُ (٤٠×). مُحَمَّدٌ رَسُولُ اللهِ صَلَّى اللَّهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ (١×)",
-    "lat": "La ilaha illa Llāh. (x40). Muhammadun Rasūlu Llāhi şalla Llāhu 'alayhi wa alihi wa sallam. (x1)",
-    "id": "Tiada Tuhan selain Allah. Muhammad Utusan Allah ﷺ."
+    "ar": "لَا إِلَهَ إِلَّا اللَّهُ",
+    "lat": "La ilaha illa Llāh. (40x)",
+    "id": "18. Tahlil"
   },
   {
-    "nomer": 19,
-    "ar": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ (۷×)",
-    "lat": "Hasbuna Llāhu wa ni'ma l-Wakil (x7)",
-    "id": "Cukuplah Allah bagi kami, dan Dialah sebaik-baik Pelindung."
+    "ar": "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+    "lat": "Hasbuna Llāhu wa ni ma l-Wakil (7x)",
+    "id": "19. Hasbunallah (7x)"
   },
   {
-    "nomer": 20,
-    "ar": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، اَللَّهُمَّ صَلِّ عَلَيْهِ وَسَلَّمْ (١٠×). اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ ، يَا رَّبِّ صَلِّ عَلَيْهِ وَسَلَّمْ (١×)",
-    "lat": "Allāhumma şalli 'alā Muhammadin, Allāhumma şalli 'alayhi wa sallam. (x10). Allāhumma şalli alā Muḥammadin, yā Rabbi şalli 'alayhi wa sallam. (x1)",
-    "id": "Ya Allah, limpahkanlah rahmat kepada Muhammad, Ya Allah limpahkan rahmat dan salam kepadanya."
+    "ar": "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، اَللَّهُمَّ صَلِّ عَلَيْهِ وَسَلَّمْ",
+    "lat": "Allāhumma şalli 'alā Muhammadin, Allāhumma şalli 'alayhi wa sallam. (10x)",
+    "id": "20. Salawat"
   },
   {
-    "nomer": 21,
-    "ar": "اسْتَغْفِرُ اللهَ (۱۱×)",
-    "lat": "Astaghfiru Llāh. (x11)",
-    "id": "Aku memohon ampun kepada Allah."
+    "ar": "اسْتَغْفِرُ اللهَ",
+    "lat": "Astaghfiru Llāh. (11x)",
+    "id": "21. Istighfar (11x)"
   },
   {
-    "nomer": 22,
-    "ar": "تَائِبُونَ إِلَى اللهِ (۳×)",
-    "lat": "Tā'ibūna ila Llah. (x3)",
-    "id": "Kami bertaubat kepada Allah."
+    "ar": "تَائِبُونَ إِلَى اللهِ",
+    "lat": "Tā'ibūna ila Llah. (3x)",
+    "id": "22. Taubat (3x)"
   },
   {
-    "nomer": 23,
-    "ar": "يَا اللَّهُ بِهَا ، يَا اللَّهُ بِهَا ، يَا اللَّهُ بِحُسْنِ الْخَاتِمَةِ (۳×)",
-    "lat": "Ya Allāhu bihā, Yā Allāhu bihā, Yā Allāhu bi husni l-khātima. (x3)",
-    "id": "Ya Allah, dengan (kalimat tauhid) ini, berilah kami akhir yang baik (husnul khatimah)."
+    "ar": "يَا اللَّهُ بِهَا ، يَا اللَّهُ بِهَا ، يَا اللَّهُ بِحُسْنِ الْخَاتِمَةِ",
+    "lat": "Ya Allāhu bihā, Yā Allāhu bihā, Yā Allāhu bi husni l-khātima. (3x)",
+    "id": "23. Husnul Khatimah (3x)"
   },
   {
-    "nomer": 24,
-    "ar": "غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ. لَا يُكَلِّفُ اللهُ نَفْسًا إِلَّا وُسْعَهَا... فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
-    "lat": "Ghufrānaka Rabbana wa ilayka l-maşır, lā yukallifu Llāhu nafsan illā wus'ahā... Anta Mawlānā fa-nşurnā 'ala l-qawmi l-kāfirīn.",
-    "id": "Ampunan-Mu yang kami harapkan wahai Tuhan kami, dan kepada-Mu tempat kembali... (Al-Baqarah: 285-286)"
+    "ar": "غُفْرَانَكَ REبَّنَا وَإِلَيْكَ الْمَصِيرُ لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ REبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا REبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا REبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
+    "lat": "Ghufrānaka Rabbana wa ilayka l-maşır, lā yukallifu Llāhu nafsan illā wus'ahā lahā mā kasabat wa 'alayhā maktasabat, Rabbanā lā tu'ākhidhnā in nasīnā aw akhț'anā, Rabbanā wa la tahmil 'alaynā işran kamā hamaltahu 'ala lladhīna min qablinā, Rabbanā wa la tuhammilnā mā la țāqata lanā bihi, wa'fu 'annā wa-ghfir lanā wa-rḥamnā Anta Mawlānā fa-nşurnā 'ala l-qawmi l-kafirīn.",
+    "id": "24. Surah Al-Baqarah: 285-286"
   },
   {
-    "nomer": 25,
-    "ar": "لَا إِلَهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ (۳×). لَا إِلَهَ إِلَّا اللهُ (٥×). اَللهُ اللهُ. إِلَّا اللهُ. اَللهُ لَا إِلَهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ. اَللهُ لَا إِلَهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ",
-    "lat": "La ila ha ilallah Muhammadu Rasullullah (x3). La ila ha ilallah (x5). Allah hu Allah. Ilallah. Allahu la ila ha ilallah Muhammadur Rasulullah. Allah hu la ila ha ilallah Muhammadur Rasulullah",
-    "id": "Tiada Tuhan selain Allah, Muhammad Utusan Allah. Tiada Tuhan selain Allah. Allah Allah. Kecuali Allah. Allah tiada Tuhan selain Allah, Muhammad Utusan Allah."
+    "ar": "لَا إِلَهَ إِلَّا اللهُ مُحَمَّدٌ رَسُولُ اللهِ (۳×) لَا إِلَهَ إِلَّا اللهُ (٥×) لَا إِلَهَ إِلَّا اللهُ اَلْمَلِكُ الْحَقُّ الْمُبِينُ (۱۰×) لَا إِلَهَ إِلَّا اللهُ (٢٥×)",
+    "lat": "La ila ha ilallah Muhammadu Rasullullah (3x), La ilaha ilallah (5x), La ilaha ilallah Almalikul Hakkul Mubin (10x), La ilaha ilallah (25x)",
+    "id": "25. Zikir Tambahan"
   },
   {
-    "nomer": 26,
-    "ar": "الْفَاتِحَة إِلَى رُوحِ سَيِّدِنَا رَسُولِ اللهِ مُحَمَّدِ بِنْ عَبْدِ اللهِ اللهِ وَآلِهِ وَأَصْحَابِهِ وَأَزْوَاجِهِ وَذُرِّيَّتِهِ...",
-    "lat": "Al-Fatiha ilā ruhi Sayyidinā Rasūli Llāhi Muhammadi bni 'Abdi Llah şalla Llāhu 'alayhi wa sallam...",
-    "id": "Al-Fatihah kepada ruh Baginda Rasulullah Muhammad bin Abdullah, keluarga, sahabat, dan keturunannya..."
+    "ar": "الْفَاتِحَة إِلَى رُوحِ سَيِّدِنَا رَسُولِ اللهِ مُحَمَّدِ بِنْ عَبْدِ اللهِ اللهِ وَآلِهِ وَأَصْحَابِهِ وَأَزْوَاجِهِ وَذُرِّيَّاتِهِ ، أَنَّ اللهَ يُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ، الْفَاتِحَة",
+    "lat": "Al-Fatiha ilā rūķi Sayyidinā Rasūli Llāhi Muhammadin bni 'Abdi Llāhi wa alihi wa aşķābihi wa azwājihi wa dhurriyyatihi, anna Llāha yu'lī darajātihim fi l-jannati wa yanfa'unā bi asrārihim wa anwarihim wa 'ulumihim fi d-dīni wa d-dunya wa l-akhirah, al-Fatiha.",
+    "id": "26. Al-Fatihah kepada Nabi & Keluarga"
   },
   {
-    "nomer": 27,
-    "ar": "الْفَاتِحَة إِلَى رُوحِ سَيِّدِنَا الْمُهَاجِرِ إِلَى اللهِ أَحْمَدِ بِنْ عِيسَى وَإِلى رُوحِ سَيِّدِنَا الْأُسْتَاذِ الْأَعْظَمِ الْفَقِيهِ الْمُقَدَّمِ مُحَمَّدِ بْنِ عَلِي بَاعَلَوِي...",
-    "lat": "Al-Fatiha ilā rūķi Sayyidina l-Muhajiri ila Llah Ahmadi bni Īsā wa ilā rūķi Sayyidina l-Ustādhi l-Aʻzami l-Faqīhi l-Muqaddami Muhammadi bni 'Alī Bā 'Alawi...",
-    "id": "Al-Fatihah kepada ruh Al-Muhajir ilallah Ahmad bin Isa dan Al-Faqih Al-Muqaddam Muhammad bin Ali Ba'alawi..."
+    "ar": "الْفَاتِحَة إِلَى رُوحِ سَيِّدِنَا الْمُهَاجِرِ إِلَى اللهِ أَحْمَدِ بِنْ عِيسَى وَأُصُولِهِ وَفُرُوعِهِ، وَإِلَى رُوحِ سَيِّدِنَا الْفَقِيهِ الْمُقَدَّمِ مُحَمَّدِ بِنْ عَلِيٍّ بَاعَلَوِيٍّ وَأُصُولِهِ وَفُرُوعِهِ، وَجَمِيعِ سَادَاتِنَا آلِ بَاعَلَوِيٍّ، أَنَّ اللهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ، الْفَاتِحَة",
+    "lat": "Al-Fatiha ilā rūķi Sayyidina l-Muhajiri ila Llāhi Ahmadi bni 'Isā wa uşūlihi wa furū'ihi, wa ilā rūķi Sayyidina l-Faqīhi l-Muqaddami Muhammad bni 'Alī Bā 'Alawi wa uşūlihi wa furū'ihi, wa jamī'i sādātinā āli Bā 'Alawi, anna Llāha yaghfiru lahum wa yarhamuhum wa yu'lī darajātihim fi l-jannati wa yanfa'unā bi asrārihim wa anwarihim wa 'ulumihim fi d-dīni wa d-dunya wa l-akhirah, al-Fatiha.",
+    "id": "27. Al-Fatihah kepada Al-Muhajir & Al-Faqih"
   },
   {
-    "nomer": 28,
-    "ar": "الْفَاتِحَة إِلَى رُوحِ سَيِّدِنَا وَحَبِيبِنَا وَبَرَكَتِنَا صَاحِبِ الرَّاتِبِ قُطْبِ الْأَنْفَاسِ الْحَبِيبِ عُمَرِ بِنْ عَبْدِ الرَّحْمَانِ الْعَطَّاسِ، وَإِلَى رُوحِ الشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللهِ بَارَاسُ، وَأُصُولِهِمْ وَفُرُوعِهِمْ وَذَوِي الْحُقُوقِ عَلَيْهِمْ أَجْمَعِينَ...",
-    "lat": "Al-Fātiņa ilā rūķi Sayyidinā wa Habībinā wa barakatină Şāḥibi r-Rātibi Qutbi l-Anfāsi l-Habībi 'Umari bni 'Abdi r-Rahmāni l- Attās, wa ilā rūķi sh-Shaykh 'Alī bni 'Abdi Llāh Bā Rās, wa uşūlihim wa furū him wa dhawi l-huqūqi 'alayhim ajmaʻina...",
-    "id": "Al-Fatihah kepada ruh penyusun Ratib, Al-Habib Umar bin Abdurrahman Al-Attas, Syekh Ali bin Abdullah Baras, serta leluhur dan keturunan mereka..."
+    "ar": "الْفَاتِحَة إِلَى رُوحِ سَيِّدِنَا وَحَبِيبِنَا وَبَرَكَتِنَا صَاحِبِ الرَّاتِبِ قُطْبِ الْأَنْفَاسِ الْحَبِيبِ عُمَرِ بِنْ عَبْدِ الرَّحْمَانِ الْعَطَاسِ، ثُمَّ إِلَى رُوحِ الشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللَّهِ بَارَاسُ، وَأُصُولِهِمَا وَفُرُوعِهِمَا، أَنَّ اللهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ وَنَفَحَاتِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ، الْفَاتِحَة",
+    "lat": "Al-Fātiņa ilā rūķi Sayyidinā wa Habībinā wa barakatinā Şahibi r-Rātib Qutbi l-anfasi l-Habīb 'Umari bni 'Abdi r-Rahmāni l-'Attās, thumma ilā rūķi sh-Shaykh 'Alī bni 'Abdi Llāhi Bā Rās, wa uşūlihimā wa furū'ihimā, anna Llāha yaghfiru lahum wa yarhamuhum wa yu'lī darajātihim fi l-jannati wa yanfa'unā bi asrārihim wa anwarihim wa 'ulumihim wa nafahātihim fi d-dīni wa d-dunya wa l-akhirah, al-Fatiha.",
+    "id": "28. Al-Fatihah kepada Penyusun Ratib"
   },
   {
-    "nomer": 29,
-    "ar": "الْفَاتِحَة إِلَى أَرْوَاحِ الْأَوْلِيَاءِ وَالشُّهَدَاءِ وَالصَّالِحِينَ وَالْأَئِمَّةِ الرَّاشِدِينَ...",
-    "lat": "Al-Fatiha ilā arwāhi l-awliyā'i wa shuhadā'i wa ş-şālihīna...",
-    "id": "Al-Fatihah kepada ruh para wali, syuhada, shalihin, para imam, orang tua kami, guru kami, dan seluruh kaum mukminin..."
+    "ar": "الْفَاتِحَة إِلَى أَرْوَاحِ الْأَوْلِيَاءِ وَالشُّهَدَاءِ وَالصَّالِحِينَ، وَالْأَئِمَّةِ الرَّاشِدِينَ، ثُمَّ إِلَى أَرْوَاحِ وَالِدِينَا وَمَشَايِخِنَا وَمُعَلِّمِينَا وَأَمْوَاتِ أَهْلِ هَذِهِ الْبَلْدَةِ مِنَ الْمُسْلِمِينَ وَالْمُسْلِمَاتِ، أَنَّ اللهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُومِهِمْ فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ، الْفَاتِحَة",
+    "lat": "Al-Fatiha ilā arwāhi l-awliyā'i wa sh-shuhada'i wa ş-şāliķīn, wa l-aimmati r-rashidīn, thumma ilā arwāhi walidīnā wa mashayikhinā wa mu'alliminā wa amwati ahli hādhihi l-baldah mina l-Muslimīn wa l-Muslimāt, anna Llāha yaghfiru lahum wa yarhamuhum wa yu'lī darajātihim fi l-jannati wa yanfa'unā bi asrārihim wa anwarihim wa 'ulumihim fi d-dīni wa d-dunya wa l-akhirah, al-Fatiha.",
+    "id": "29. Al-Fatihah kepada Para Awliya"
   },
   {
-    "nomer": 30,
-    "ar": "الْفَاتِحَة بِالْقَبُولِ وَتَمَامِ كُلِّ سُولٍ وَمَأْمُولٍ وَصَلَاحِ الشَّأْنِ ظَاهِرًا وَبَاطِنَا فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ...",
-    "lat": "Al-Fatiha bi l-qabūli wa tamāmi kulli sūlin wa ma'mūlin wa salāḥi sh-sha'ni zāhiran wa bāținan...",
-    "id": "Al-Fatihah dengan permohonan diterimanya doa, dipenuhinya segala harapan, dan diperbaikinya segala urusan lahir dan batin..."
+    "ar": "الْفَاتِحَة بِالْقَبُولِ وَتَمَامِ كُلِّ سُولٍ وَمَأْمُولٍ، وَصَلَاحِ الشَّأْنِ ظَاهِرًا وَبَاطِنًا فِي الدِّينِ وَالدُّنْيَا وَالْآخِرَةِ، دَافِعَةً لِكُلِّ شَرٍّ، جَالِبَةً لِكُلِّ خَيْرٍ، لَنَا وَلِوَالِدِينَا وَلِأَوْلَادِنَا وَلِأَحْبَابِنَا وَلِمَشَايِخِنَا فِي الدِّينِ، مَعَ اللُّطْفِ وَالْعَافِيَةِ، وَعَلَى نِيَّةِ أَنَّ اللهَ يُنَوِّرُ قُلُوبَنَا وَقَوَالِبَنَا مَعَ الْهُدَى وَالتُّقَى وَالْعَفَافِ وَالْغِنَى وَالْمَوْتِ عَلَى دِينِ الْإِسْلَامِ وَالْإِيمَانِ، بِلَا مِحْنَةٍ وَلَا اخْتِبَارٍ، بِحَقِّ سَيِّدِ وَلَدِ عَدْنَانَ، وَجَمِيعِ نِيَّاتِ الصَّالِحَةِ، وَإِلَى حَضْرَةِ النَّبِيِّ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، الْفَاتِحَة",
+    "lat": "Al-Fatiha bi l-qabūli wa tamāmi kulli sūlin wa ma'mūl, wa şalāķi sh-sha'ni ẓāhiran wa bāṭinan fi d-dīni wa d-dunya wa l-akhirah, dāfi'atan li kulli sharrin jâlibatan li kulli khayrin lanā wa li walidīnā wa li awladinā wa li aķbābinā wa li mashāyikhinā fi d-dīn, ma'a l-lutfi wa l-'āfiyah, wa 'alā niyyati anna Llāha yunawwiru qulūbanā wa qawālibanā ma'a l-huda wa t-tuqa wa l-'afafi wa l-ghina wa l-mawti 'alā dīni l-Islām wa l-īmān, bila mihnatin wa la khtibār, bi haqqi sayyidi waladi 'Adnan, wa jamī'i niyyati ş-şaliķah, wa ilā hadrati n-Nabiyyi Muhammadin şalla Llāhu 'alayhi wa ālihi wa sallam, al-Fatiha.",
+    "id": "30. Al-Fatihah Penutup & Niat"
   },
   {
-    "nomer": 31,
-    "ar": "بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ، اَلْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِينَ، حَمْدًا يُوَافِي نِعَمَهُ وَيُكَافِئُ مَزِيْدَهُ... اَللّٰهُمَّ إِنَّا نَسْتَحْفِظُكَ وَنَسْتَوْدِعُكَ أَدْيَانَنَا وَأَنْفُسَنَا وَأَمْوَالَنَا... وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِيْنَ",
-    "lat": "Bismi Llāhi r-Raḥmāni r-Raḥīm, al-ḥamdu li Llāhi Rabbi l-'ālamīn, ḥamdan yuwāfī ni'amahu wa yukāfi'u mazīdah... Allāhumma innā nastaḥfiẓuka wa nastaudi'uka adyānanā... wa l-ḥamdu li Llāhi Rabbi l-'ālamīn.",
-    "id": "Dengan menyebut nama Allah Yang Maha Pengasih lagi Maha Penyayang. Segala puji bagi Allah Tuhan semesta alam... Ya Allah kami memohon perlindungan-Mu atas agama kami, diri kami, harta kami... Segala puji bagi Allah Tuhan semesta alam."
+    "ar": "بِسْمِ اللهِ REحْمٰنِ REحِيمِ، اَلْحَمْدُ لِلّٰهِ REبِّ الْعَالَمِينَ، حَمْدًا يُوَافِي نِعَمَهُ وَيُكَافِئُ مَزِيْدَهُ، يَا REبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِ جَلَالِ وَجْهِكَ وَعَظِيمِ سُلْطَانِكَ. سُبْحَانَكَ لَا نُحْصِي ثَنَاءً عَلَيْكَ أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ، فَلَكَ الْحَمْدُ حَتَّى تَرْضَى، وَلَكَ الْحَمْدُ إِذَا رَضِيْتَ، وَلَكَ الْحَمْدُ بَعْدَ REِّضَا. اَللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْأَوَّلِينَ، وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْآخِرِينَ، وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي كُلِّ وَقْتٍ وَحِينٍ، وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْمَلَإِ الْأَعْلَى إِلَى يَوْمِ الدِّينِ، وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ حَتَّى تَرِثَ الْأَرْضَ وَمَنْ عَلَيْهَا وَأَنْتَ خَيْرُ الْوَارِثِينَ. اَللَّهُمَّ إِنَّا نَسْتَحْفِظُكَ وَنَسْتَوْدِعُكَ أَدْيَانَنَا وَأَنْفُسَنَا وَأَمْوَالَنَا وَأَهْلَنَا وَكُلَّ شَيْءٍ أَعْطَيْتَنَا. اَللَّهُمَّ اجْعَلْنَا وَإِيَّاهُمْ فِي كَنَفِكَ وَأَمَانِكَ وَجِوَارِكَ وَعِيَاذِكَ مِنْ كُلِّ شَيْطَانٍ مَرِيدٍ وَجَبَّارٍ عَنِيدٍ وَذِي عَيْنٍ وَذِي بَغْيٍ وَمِنْ شَرِّ كُلِّ ذِي شَرٍّ إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ. اَللَّهُمَّ جَمِّلْنَا بِالْعَافِيَةِ وَالسَّلَامَةِ وَحَقِّقْنَا بِالتَّقْوَى وَالْإِسْتِقَامَةِ وَأَعِذْنَا مِنْ مُوجِبَاتِ النَّدَامَةِ إِنَّكَ سَمِيْعُ الدُّعَاءِ. اَللَّهُمَّ اغْفِرْ لَنَا وَلِوَالِدِينَا وَلِأَوْلَادِنَا وَلِمَشَايِخِنَا وَلِإِخْوَانِنَا فِي الدِّينِ وَلِأَصْحَابِنَا وَلِمَنْ أَحَبَّنَا فِيكَ وَلِجَمِيعِ الْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِينَ وَالْمُسْلِمَاتِ يَا REبَّ الْعَالَمِينَ. وَصَلِّ اَللَّهُمَّ عَلَى جَمَالِكَ الْأَكْمَلِ وَنُورِكَ الْأَجْمَلِ سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلِّمْ وَالْحَمْدُ لِلّٰهِ REبِّ الْعَالَمِينَ.",
+    "lat": "Bismi Llāhi r-Raḥmāni r-Raḥīm, al-ḥamdu li Llāhi Rabbi l-'ālamīn, ḥamdan yuwāfī ni'amahu wa yukāfi'u mazīdah, yā Rabbanā laka l-ḥamdu kamā yanbaghī li jalāli wajhika wa 'aẓīmi sulṭānik. Subḥānaka lā nuḥṣī thanā'an 'alayka Anta kamā athnayta 'alā nafsik, fa laka l-ḥamdu ḥattā tarḍā, wa laka l-ḥamdu idhā raḍīta, wa laka l-ḥamdu ba'da r-riḍā. Allāhumma ṣalli wa sallim 'alā Sayyidinā Muḥammadin fi l-awwalīn, wa ṣalli wa sallim 'alā Sayyidinā Muḥammadin fi l-ākhirīn, wa ṣalli wa sallim 'alā Sayyidinā Muḥammadin fī kulli waqtin wa ḥīn, wa ṣalli wa sallim 'alā Sayyidinā Muḥammadin fi l-mala'i l-a'lā ilā yawmi d-dīn, wa ṣalli wa sallim 'alā Sayyidinā Muḥammadin ḥattā taritha l-arḍa wa man 'alayhā wa Anta khayru l-wārithīn. Allāhumma innā nastaḥfiẓuka wa nastaudi'uka adyānanā wa anfusana wa amwālanā wa ahlanā wa kulla shay'in a'ṭaytanā. Allāhumma-j'alnā wa iyyāhum fī kana fika wa amānika wa jiwārika wa 'iyādhika min kulli shayṭānin marīd wa jabbārin 'anīd wa dhī 'aynin wa dhī baghyin wa min sharri kulli dhī sharrin innaka 'alā kulli shay'in qadīr. Allāhumma jammilnā bi l-'āfiyati wa s-salāmati wa ḥaqqiqnā bi t-taqwā wa l-istiqāmati wa a'idhnā min mūjibāti n-nadāmati innaka samī'u d-du'ā'. Allāhumma-ghfir lanā wa li walidīnā wa li awlādinā wa li mashāyikhinā wa li ikhwāninā fi d-dīn wa li aṣ-ḥābinā wa li man aḥabbanā fīka wa li jamī'i l-mu'minīna wa l-mu'mināti wa l-muslimīna wa l-muslimāti yā Rabba l-'ālamīn. Wa ṣalli Allāhumma 'alā jamālika l-akmali wa nūrika l-ajmali Sayyidinā Muḥammadin wa 'alā ālihi wa ṣahbihi wa sallim wa l-ḥamdu li Llāhi Rabbi l-'ālamīn.",
+    "id": "31. Doa Penutup"
   }
 ]
 
-```
 
