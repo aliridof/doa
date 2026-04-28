@@ -14,7 +14,7 @@ const PRAYER_LIST = [
         title: "Ratib Al-Attas",
         desc: "Karya Al-Habib Umar bin Abdurrahman Al-Attas (Lengkap 31 Bagian).",
         tag: "VER 1.0",
-        dataVar: "ratib-alattas.js"
+        dataVar: "RATIB_ALATTAS_DATA"
     },
     {
         id: "ratib-alhaddad",
