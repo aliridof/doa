@@ -7,118 +7,90 @@
     <title>Doa & Ratib Digital</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- LOAD MODUL DATA -->
+    <script src="list.js"></script>
+    <script src="ratib-alattas.js"></script>
+    <script src="ratib-alhaddad.js"></script>
+
     <style>
         :root { --arabic-font: 'Amiri', serif; }
-        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-tap-highlight-color: transparent; }
-        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc; 
+            -webkit-tap-highlight-color: transparent;
+            scroll-behavior: smooth;
+        }
         .arabic-text { 
             font-family: var(--arabic-font); 
-            line-height: 2.6; 
+            line-height: 2.7; 
             direction: rtl; 
             text-align: right; 
             word-spacing: 2px;
         }
-
-        .hide-latin .latin-text { display: none; }
-        .hide-meaning .meaning-text { display: none; }
-        
+        .hide-latin .latin-text { display: none !important; }
         .page-fade { animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-        @keyframes fadeIn { 
-            from { opacity: 0; transform: translateY(15px); } 
-            to { opacity: 1; transform: translateY(0); } 
-        }
-
-        .toggle-active { 
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .card-shadow { box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); }
+        .btn-toggle-active { 
             background-color: #10b981 !important; 
             color: white !important; 
             box-shadow: 0 4px 12px -2px rgba(16, 185, 129, 0.3);
         }
-
-        .card-shadow { 
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05); 
-        }
-
-        .search-input:focus { box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15); }
-        
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
     </style>
 </head>
 <body class="min-h-screen text-slate-900 overflow-x-hidden selection:bg-emerald-100">
 
     <div id="app" class="flex flex-col min-h-screen">
-        
         <!-- HEADER -->
-        <header id="app-header" class="bg-emerald-700 text-white sticky top-0 z-50 shadow-md">
+        <header class="bg-emerald-700 text-white sticky top-0 z-50 shadow-md">
             <div class="max-w-3xl mx-auto px-5 h-16 flex items-center justify-between">
-                <div id="header-action" class="flex items-center gap-3 text-white">
-                    <h1 class="font-extrabold text-lg tracking-tight uppercase">DOA & RATIB</h1>
+                <div id="header-action" class="flex items-center gap-3">
+                    <h1 class="font-extrabold text-lg tracking-tight uppercase cursor-pointer" onclick="goHome()">DOA & RATIB</h1>
                 </div>
                 <div class="flex items-center gap-2">
-                    <span class="text-[9px] bg-emerald-800/50 px-2 py-1 rounded border border-emerald-500/30 font-mono font-bold tracking-widest uppercase">V3.1 FINAL</span>
+                    <span class="text-[9px] bg-emerald-800/50 px-2 py-1 rounded border border-emerald-500/30 font-mono font-bold tracking-widest uppercase">v3.5 MODULAR</span>
                 </div>
             </div>
         </header>
 
-        <!-- SEARCH AREA (Home Only) -->
-        <div id="search-section" class="bg-emerald-700 pb-10 px-5 transition-all">
+        <!-- SEARCH AREA -->
+        <div id="search-section" class="bg-emerald-700 pb-10 px-5">
             <div class="max-w-3xl mx-auto relative">
                 <div class="relative group">
-                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-emerald-600 transition-colors pointer-events-none">
+                    <div class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     </div>
-                    
                     <input type="text" id="search-input" oninput="handleSearch()" placeholder="Cari doa atau ratib..." 
-                        class="w-full pl-12 pr-12 py-4 rounded-[1.2rem] bg-white border-none text-slate-900 placeholder:text-slate-400 focus:outline-none transition-all shadow-2xl text-base search-input">
-                    
-                    <button id="btn-clear" onclick="clearSearch()" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hover:text-slate-500 hidden transition-all p-1 active:scale-75">
+                        class="w-full pl-12 pr-12 py-4 rounded-[1.5rem] bg-white border-none focus:outline-none transition-all shadow-2xl text-base">
+                    <button id="btn-clear" onclick="clearSearch()" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-300 hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- MAIN AREA -->
+        <!-- CONTENT -->
         <main class="flex-grow max-w-3xl mx-auto w-full p-5 md:p-8">
-            <!-- VIEW: HOME -->
-            <div id="view-home" class="page-fade space-y-6">
-                <div class="flex items-center justify-between px-1">
-                    <h2 class="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">Pilihan Utama</h2>
-                </div>
-                <div id="prayer-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <!-- Cards are injected here -->
-                </div>
-            </div>
-
-            <!-- VIEW: READER -->
+            <div id="view-home" class="page-fade grid grid-cols-1 sm:grid-cols-2 gap-5"></div>
             <div id="view-reader" class="hidden page-fade">
-                <div id="reader-content" class="space-y-16 pb-64">
-                    <!-- Text is injected here -->
-                </div>
+                <div id="reader-content" class="space-y-16 pb-64"></div>
             </div>
         </main>
 
-        <!-- FOOTER CONTROLS (Reader Only) -->
+        <!-- CONTROLS -->
         <div id="reader-controls" class="fixed bottom-8 left-1/2 -translate-x-1/2 w-[92%] max-w-lg z-50 hidden">
-            <div class="bg-white/95 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[2.5rem] border border-white/20 p-2.5">
-                
-                <div class="flex items-center gap-2 mb-3 bg-slate-100/50 rounded-[2rem] p-1">
-                    <button onclick="toggleFeature('latin')" id="toggle-latin" class="flex-1 py-3.5 rounded-[1.7rem] text-[10px] font-extrabold tracking-widest transition-all">LATIN</button>
-                    <button onclick="toggleFeature('meaning')" id="toggle-meaning" class="flex-1 py-3.5 rounded-[1.7rem] text-[10px] font-extrabold tracking-widest transition-all">ARTI</button>
-                </div>
-
-                <div class="px-5 py-2 flex items-center justify-between">
-                    <div class="flex items-center gap-6">
-                        <button onclick="changeZoom(-5)" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-500 hover:text-emerald-600 transition-all active:scale-75 shadow-sm font-bold text-2xl">-</button>
-                        <div class="flex flex-col items-center min-w-[85px]">
-                            <span id="zoom-text" class="text-base font-black text-slate-800 leading-none">100%</span>
-                            <span class="text-[8px] text-slate-400 font-black uppercase tracking-tighter mt-1.5 whitespace-nowrap">BESAR/KECIL</span>
-                        </div>
-                        <button onclick="changeZoom(5)" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-500 hover:text-emerald-600 transition-all active:scale-75 shadow-sm font-bold text-2xl">+</button>
+            <div class="bg-white/95 backdrop-blur-xl shadow-[0_20px_60px_rgba(0,0,0,0.15)] rounded-[2.5rem] border border-slate-200/50 p-3">
+                <div class="flex items-center justify-between px-2">
+                    <button onclick="changeZoom(-5)" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-500 active:scale-75 shadow-sm font-bold text-2xl">-</button>
+                    <div class="flex flex-col items-center min-w-[85px]">
+                        <span id="zoom-text" class="text-base font-black text-slate-800 leading-none">100%</span>
+                        <span class="text-[9px] text-slate-400 font-black uppercase tracking-widest mt-1.5">BESAR/KECIL</span>
                     </div>
-                    
-                    <button onclick="goHome()" class="w-14 h-14 bg-emerald-600 text-white rounded-[1.8rem] flex items-center justify-center shadow-lg hover:bg-emerald-700 active:scale-90 transition-all">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    <button onclick="changeZoom(5)" class="w-12 h-12 rounded-full flex items-center justify-center bg-slate-100 text-slate-500 active:scale-75 shadow-sm font-bold text-2xl">+</button>
+                    <div class="h-8 w-[1px] bg-slate-200 mx-2"></div>
+                    <button id="btn-latin-toggle" onclick="toggleLatin()" class="w-14 h-14 bg-slate-100 text-slate-500 rounded-[1.2rem] flex items-center justify-center shadow-md active:scale-90">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg>
                     </button>
                 </div>
             </div>
@@ -126,100 +98,40 @@
     </div>
 
     <script>
-        // DATA EMBEDDED - FULL VERSION (31 Sections)
-        const APP_DATA = {
-            "ratib-alattas": {
-                title: "Ratib Al-Attas",
-                desc: "Zikir lengkap karya Al-Habib Umar bin Abdurrahman Al-Attas.",
-                tag: "LENGKAP",
-                content: [
-                    { ar: "الْفَاتِحَةِ إِلَى حَضْرَةِ سَيِّدِنَا وَحَبِيبِنَا مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَصَحْبِهِ وَسَلَّمَ، وَ إِلَى رُوحِ سَيِّدِنَا الْحَبِيبِ عُمَرِ بِنْ عَبْدِ الرَّحْمَانِ الْعَطَاسِ ، صَاحِبِ الرَّاتِبِ، وَالشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللَّهِ بَارَاسُ، وَإِلى رُوحِ سَيِّدِنَا الإِمَامِ الْحَبِيبِ أَحْمَددِ بِنْ حَسَنِ بنِ عَبْدِ اللَّهِ الْعَطَاسِ الْفَاتِحَةِ", lat: "Al-Fatihah ila hadhrati Sayyidina wa Habibina Muhammadin shallallahu 'alaihi wa alihi wa shahbihi wa sallam, wa ila ruhi Sayyidinal Habibi Umari bin Abdirrahmanil 'Attas, Shahibir Ratib, wasy Syaikh Ali bin Abdillahi Ba Ras, wa ila ruhi Sayyidinal Imamil Habibi Ahmadi bin Hasani bin Abdillahi l-'Attas, Al-Fatihah.", id: "1. Tawassul Pembuka" },
-                    { ar: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ (١) الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (٢) الرَّحْمَنِ الرَّحِيمِ (٣) مَالِكِ يَوْمِ الدِّينِ (٤) إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ (٥) اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (٦) صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ (٧)", lat: "Bismillahirrahmanirrahim. Alhamdulillahi rabbil 'alamin. Arrahmanirrahim. Maliki yawmiddin. Iyyaka na'budu wa iyyaka nasta'in. Ihdinash shiratal mustaqim. Shirathalladzina an'amta 'alaihim ghairil maghdhubi 'alaihim waladh dhallin.", id: "2. Surah Al-Fatihah" },
-                    { ar: "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ", lat: "A'udzu billahis samiy'il 'alimi minasy syaithonir rojim. (3x)", id: "3. Perlindungan (3x)" },
-                    { ar: "لَوْ أَنْزَلْنَا هَذَا الْقُرْآنَ عَلَى جَبَلٍ لَرَأَيْتَهُ خَاشِعًا مُتَصَدِّعًا مِنْ خَشْيَةِ اللَّهِ وَتِلْكَ الأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ (٢١) هُوَ اللَّهُ الَّذِي لا إِلَهَ إِلا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَنُ الرَّحِيمُ (٢٢)", lat: "Lau anzalna hadzal qur-ana 'ala jabalin lara-aitahu khasyi'an mutashaddi'an min khasy-yatillah. Wa tilkal amtsalu nadhribuha linnasi la'allahum yatafakkarun. Huwallahulladzi la ilaha illa huwa 'alimul ghaibi wasy syahadati huwar rahmanur rahim.", id: "4. Surah Al-Hashr: 21-22" },
-                    { ar: "هُوَ اللَّهُ الَّذِي لا إِلَهَ إِلا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ (٢٣) هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الأَسْمَاءُ الْحُسْنَى يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ (٢٤)", lat: "Huwallahulladzi la ilaha illa huwal malikul quddusus salamul mu'minul muhaiminul 'azizul jabbarul mutakabbir. Subhanallahi 'amma yusyrikun. Huwallahul khaliqul bari-ul mushawwiru lahul asma-ul husna. Yusabbihu lahu ma fis samawati wal ardhi wahuwal 'azizul hakim.", id: "5. Surah Al-Hashr: 23-24" },
-                    { ar: "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ", lat: "A'udzu billahis samiy'il 'alimi minasy syaithonir rojim. (3x)", id: "6. Perlindungan (3x)" },
-                    { ar: "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ", lat: "A'udzu bikalimatillahit tammaati min syarri ma khalaq. (3x)", id: "7. Kalimat Perlindungan (3x)" },
-                    { ar: "بِسْمِ اللَّهِ الَّذِي لا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ", lat: "Bismillahilladzi la yadhurru ma'asmihi syai-un fil ardhi wala fis samai wahuwas samiy'ul 'alim. (3x)", id: "8. Nama Allah (3x)" },
-                    { ar: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ وَلا حَوْلَ وَلا قُوَّةَ إِلا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ", lat: "Bismillahir rahmanir rahim, wala hawla wala quwwata illa billahil 'aliyyil 'adzhim. (10x)", id: "9. Hawqalah (10x)" },
-                    { ar: "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ", lat: "Bismillahir rahmanir rahim. (3x)", id: "10. Basmalah (3x)" },
-                    { ar: "بِسْمِ اللَّهِ تَحَصَّنَّا بِاللَّهِ بِسْمِ اللَّهِ تَوَكَّلْنَا عَلَى اللَّهِ", lat: "Bismillahi tahashshanna billah, bismillahi tawakkalna 'alallah. (3x)", id: "11. Tahassun (3x)" },
-                    { ar: "بِسْمِ اللَّهِ آمَنَّا بِاللَّهِ وَمَنْ يُؤْمِنْ بِاللَّهِ لا خَوْفٌ عَلَيْهِ", lat: "Bismillahi amanna billah, waman yu'min billahi la khawfun 'alaihi. (3x)", id: "12. Iman (3x)" },
-                    { ar: "سُبْحَانَ اللَّهِ عَزَّ اللَّهُ سُبْحَانَ اللَّهِ جَلَّ اللَّهُ", lat: "Subhanallahi 'azzallah, subhanallahi jallallah. (3x)", id: "13. Tasbih (3x)" },
-                    { ar: "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ", lat: "Subhanallahi wa bihamdihi subhanallahil 'adzhim. (3x)", id: "14. Tasbih & Hamdalah (3x)" },
-                    { ar: "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلا إِلَهَ إِلا اللَّهُ وَاللَّهُ أَكْبَرُ", lat: "Subhanallahi wal hamdu lillahi wala ilaha illallahu wallahu akbar. (4x)", id: "15. Tahlil & Takbir (4x)" },
-                    { ar: "يَا لَطِيفًا بِخَلْقِهِ يَا عَلِيمًا بِخَلْقِهِ يَا خَبِيرًا بِخَلْقِهِ الْطُفْ بِنَا يَا لَطِيفُ يَا عَلِيمُ يَا خَبِيرُ", lat: "Ya lathifan bi khalqihi ya 'aliman bi khalqihi ya khabiran bi khalqihi, ultuf bina ya lathifu ya 'alimu ya khabir. (3x)", id: "16. Ya Latif (3x)" },
-                    { ar: "يَا لَطِيفًا لَمْ يَزَلْ الْطُفْ بِنَا فِيمَا نَزَلْ إِنَّكَ لَطِيفٌ لَمْ تَزَلْ الْطُفْ بِنَا وَالْمُسْلِمِينَ", lat: "Ya lathifan lam yazal ultuf bina fima nazal, innaka lathifun lam tazal ultuf bina wal muslimin. (3x)", id: "17. Ya Latifan lam yazal (3x)" },
-                    { ar: "لا إِلَهَ إِلا اللَّهُ", lat: "La ilaha illallah. (40x)", id: "18. Tahlil" },
-                    { ar: "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ", lat: "Hasbunallahu wa ni'mal wakil. (7x)", id: "19. Hasbunallah (7x)" },
-                    { ar: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ اللَّهُمَّ صَلِّ عَلَيْهِ وَسَلِّمْ", lat: "Allahumma shalli 'ala muhammad, allahumma shalli 'alaihi wa sallim. (11x)", id: "20. Shalawat (11x)" },
-                    { ar: "أَسْتَغْفِرُ اللَّهَ", lat: "Astaghfirullah. (11x)", id: "21. Istighfar (11x)" },
-                    { ar: "تَائِبُونَ إِلَى اللَّهِ", lat: "Ta-ibuna ilallah. (3x)", id: "22. Taubat (3x)" },
-                    { ar: "يَا اللَّهُ بِهَا يَا اللَّهُ بِهَا يَا اللَّهُ بِحُسْنِ الْخَاتِمَةِ", lat: "Ya Allahu biha ya Allahu biha ya Allahu bihusnil khatimah. (3x)", id: "23. Husnul Khatimah (3x)" },
-                    { ar: "غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ، لا يُكَلِّفُ اللَّهُ نَفْسًا إِلا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لا تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا رَبَّنَا وَلا تُحَمِّلْنَا مَا لا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنْتَ مَوْلانَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ.", lat: "Ghufranaka rabbana wa ilaikal mashir. La yukallifullahu nafsan illa wus'aha, laha ma kasabat wa 'alaiha maktasabat. Rabbana la tu-akhidzna in nasina aw akhta'na, rabbana wala tahmil 'alaina ishran kama hamaltahu 'alalladzina min qablina, rabbana wala tuhammilna ma la thaqata lana bihi, wa'fu 'anna waghfir lana warhamna anta maulana fanshurna 'alal qaumil kafirin.", id: "24. Surah Al-Baqarah: 285-286" },
-                    { ar: "لا إِلَهَ إِلا اللَّهُ مُحَمَّدٌ رَسُوْلُ اللهِ (٣×) لا إِلَهَ إِلا اللَّهُ (٥×) لا إِلَهَ إِلا اللَّهُ اَلْمَلِكُ الْحَقُّ الْمُبِيْنُ (١٠×) لا إِلَهَ إِلا اللَّهُ (٢٥×)", lat: "La ilaha illallahu muhammadur rasulullah (3x). La ilaha illallah (5x). La ilaha illallahu almalikul haqqul mubin (10x). La ilaha illallah (25x).", id: "25. Zikir" },
-                    { ar: "اَلْفَاتِحَةِ إِلَى رُوْحِ سَيِّدِنَا رَسُوْلِ اللهِ مُحَمَّدِ بْنِ عَبْدِ اللهِ وَآلِهِ وَأَصْحَابِهِ وَأَزْوَاجِهِ وَذُرِّيَّاتِهِ، أَنَّ اللهَ يُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالآخِرَةِ، اَلْفَاتِحَةِ", lat: "Al-Fatihah ila ruhi Sayyidina Rasulillahi Muhammadibni Abdillahi wa alihi wa ashabihi wa azwajihi wa dzurriyatihi, annallaha yu'li darajatihim fil jannati wa yanfa'una bi-as rarihim wa anwarihim wa 'ulumihim fiddini wad dunya wal akhirah. Al-Fatihah.", id: "26. Al-Fatihah kepada Nabi & Keluarga" },
-                    { ar: "اَلْفَاتِحَةِ إِلَى رُوْحِ سَيِّدِنَا الْمُهَاجِرِ إِلَى اللهِ أَحْمَدَ بْنِ عِيْسَى وَأُصُوْلِهِ وَفُرُوْعِهِ، وَإِلَى رُوْحِ سَيِّدِنَا الْفَقِيْهِ الْمُقَدَّمِ مُحَمَّدِ بْنِ عَلِيٍّ بَاعَلَوِيٍّ وَأُصُوْلِهِ وَفُرُوْعِهِ، وَجَمِيْعِ سَادَاتِنَا آلِ بَاعَلَوِيٍّ، أَنَّ اللهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالآخِرَةِ، اَلْفَاتِحَةِ", lat: "Al-Fatihah ila ruhi Sayyidinal Muhajiri ilallahi Ahmadabni 'Isa wa ushulih wa furu'ih, wa ila ruhi Sayyidinal Faqihil Muqaddami Muhammadibni 'Ali Ba 'Alawi wa ushulih wa furu'ih, wa jami'i sadatina ali Ba 'Alawi, annallaha yaghfiru lahum wayarhamuhum wayu'li darajatihim fil jannati wayanfa'una bi-as rarihim wa anwarihim wa 'ulumihim fiddini wad dunya wal akhirah. Al-Fatihah.", id: "27. Al-Fatihah kepada Al-Muhajir & Al-Faqih" },
-                    { ar: "اَلْفَاتِحَةِ إِلَى رُوْحِ سَيِّدِنَا وَحَبِيْبِنَا وَبَرَكَتِنَا صَاحِبِ الرَّاتِبِ قُطْبِ الأَنْفَاسِ اَلْحَبِيْبِ عُمَرَ بْنِ عَبْدِ الرَّحْمَانِ الْعَطَّاسِ، ثُمَّ إِلَى رُوْحِ الشَّيْخِ عَلِيِّ بْنِ عَبْدِ اللهِ بَارَاس، وَأُصُوْلِهِمَا وَفُرُوْعِهِمَا، أَنَّ اللهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ وَنَفَحَاتِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالآخِرَةِ، اَلْفَاتِحَةِ", lat: "Al-Fatihah ila ruhi Sayyidina wa Habibina wa barakatina Shahibir Ratib Quthbil Anfasil Habibi Umari bin Abdirrahmanil 'Attas, tsumma ila ruhi Syaikh Ali bin Abdillahi Ba Ras, wa ushulihima wa furu'ihima, annallaha yaghfiru lahum wayarhamuhum wayu'li darajatihim fil jannati wayanfa'una bi-as rarihim wa anwarihim wa 'ulumihim wa nafahatihim fiddini wad dunya wal akhirah. Al-Fatihah.", id: "28. Al-Fatihah kepada Penyusun Ratib" },
-                    { ar: "اَلْفَاتِحَةِ إِلَى أَرْوَاحِ الأَوْلِيَاءِ وَالشُّهَدَاءِ وَالصَّالِحِيْنَ، وَالأَئِمَّةِ الرَّاشِدِيْنَ، ثُمَّ إِلَى أَرْوَاحِ وَالِدِيْنَا وَمَشَايِخِنَا وَمُعَلِّمِيْنَا وَأَمْوَاتِ أَهْلِ هَذِهِ الْبَلْدَةِ مِنَ الْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ، أَنَّ اللهَ يَغْفِرُ لَهُمْ وَيَرْحَمُهُمْ وَيُعْلِي دَرَجَاتِهِمْ فِي الْجَنَّةِ، وَيَنْفَعُنَا بِأَسْرَارِهِمْ وَأَنْوَارِهِمْ وَعُلُوْمِهِمْ فِي الدِّيْنِ وَالدُّنْيَا وَالآخِرَةِ، اَلْفَاتِحَةِ", lat: "Al-Fatihah ila arwahil awliya' wasy syuhada' wash shalihin, wal aimmatir rasyidin, tsumma ila arwahi walidina wa masyayikhina wa mu'allimina wa amwati ahli hadzihil baldati minal muslimina wal muslimat, annallaha yaghfiru lahum wayarhamuhum wayu'li darajatihim fil jannati wayanfa'una bi-as rarihim wa anwarihim wa 'ulumihim fiddini wad dunya wal akhirah. Al-Fatihah.", id: "29. Al-Fatihah kepada Para Awliya" },
-                    { ar: "اَلْفَاتِحَةِ بِالْقَبُوْلِ وَتَمَامِ كُلِّ سُوْلٍ وَمَأْمُوْلٍ، وَصَلاحِ الشَّأْنِ ظَاهِرًا وَبَاطِنًا فِي الدِّيْنِ وَالدُّنْيَا وَالآخِرَةِ، دَافِعَةً لِكُلِّ شَرٍّ جَالِبَةً لِكُلِّ خَيْرٍ، لَنَا وَلِوَالِدِيْنَا وَلأَوْلادِنَا وَلأَحْبَابِنَا وَلِمَشَايِخِنَا فِي الدِّيْنِ مَعَ اللُّطْفِ وَالْعَافِيَةِ، وَعَلَى نِيَّةِ أَنَّ اللهَ يُنَوِّرُ قُلُوْبَنَا وَقَوَالِبَنَا مَعَ الْهُدَى وَالتُّقَى وَالْعَفَافِ وَالْغِنَى، وَالْمَوْتِ عَلَى دِيْنِ الإِسْلامِ وَالإِيْمَانِ بِلا مِحْنَةٍ وَلا اخْتِبَارٍ، بِحَقِّ سَيِّدِ وَلَدِ عَدْنَانَ، وَجَمِيْعِ نِيَّاتِ الصَّالِحَةِ وَإِلَى حَضْرَةِ النَّبِيِّ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ، اَلْفَاتِحَةِ", lat: "Al-Fatihah bil qabuli wa tamami kulli sulin wa ma'mul, wa shalahisy sya'ni dhahiran wa bathinan fiddini wad dunya wal akhirah, dafi'atan likulli syarrin jalibatan likulli khairin, lana waliwalidina waliauladina waliahabina walimasyayikhina fiddini ma'al luthfi wal 'afiyah, wa 'ala niyyati annallaha yunawwiru qulubana wa qawalibana ma'al huda wat tuqa wal 'afafi wal ghina, wal mawti 'ala dinil islami wal imani bila mihnatin wala ikhtibar, bihaqqi sayyidi waladi 'adnan, wa jami'i niyyatis shalihah, wa ila hadhratin Nabiyyi Muhammadin shallallahu 'alaihi wa alihi wa sallam. Al-Fatihah.", id: "30. Al-Fatihah Penutup & Niat" },
-                    { ar: "بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ. اَلْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ. حَمْدًا يُوَافِي نِعَمَهُ وَيُكَافِئُ مَزِيْدَهُ. يَا رَبَّنَا لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَعَظِيْمِ سُلْطَانِكَ. سُبْحَانَكَ لَا نُحْصِي ثَنَاءً عَلَيْكَ أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ. فَلَكَ الْحَمْدُ حَتَّى تَرْضَى، وَلَكَ الْحَمْدُ إِذَا رَضِيْتَ، وَلَكَ الْحَمْدُ بَعْدَ الرِّضَا. اَللَّهُمَّ صَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْأَوَّلِيْنَ. وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْآخِرِيْنَ. وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي كُلِّ وَقْتٍ وَحِيْنٍ. وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ فِي الْمَلَإِ الْأَعْلَى إِلَى يَوْمِ الدِّيْنِ. وَصَلِّ وَسَلِّمْ عَلَى سَيِّدِنَا مُحَمَّدٍ حَتَّى تَرِثَ الْأَرْضَ وَمَنْ عَلَيْهَا وَأَنْتَ خَيْرُ الْوَارِثِيْنَ. اَللَّهُمَّ إِنَّا نَسْتَحْفِظُكَ وَنَسْتَوْدِعُكَ أَدْيَانَنَا وَأَنْفُسَنَا وَأَمْوَالَنَا وَأَهْلَنَا وَكُلَّ شَيْءٍ أَعْطَيْتَنَا. اَللَّهُمَّ اجْعَلْنَا وَإِيَّاهُمْ فِي كَنَفِكَ وَأَمَانِكَ وَعِيَاذِكَ مِنْ كُلِّ شَيْطَانٍ مَرِيْدٍ، وَجَبَّارٍ عَنِيْدٍ، وَذِي عَيْنٍ وَذِي بَغْيٍ وَذِي حَسَدٍ وَمِنْ شَرِّ كُلِّ ذِي شَرٍّ، إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ. اَللَّهُمَّ جَمِّلْنَا بِالْعَافِيَةِ وَالسَّلَامَةِ. وَحَقِّقْنَا بِالتَّقْوَى وَالْإِسْتِقَامَةِ. وَأَعِذْنَا مِنْ مُوْجِبَاتِ النَّدَامَةِ، إِنَّكَ سَمِيْعُ الدُّعَاءِ. اَللَّهُمَّ اغْفِرْ لَنَا وَلِوَالِدِيْنَا وَلِأَوْلَادِنَا وَلِمَشَايِخِنَا وَلِإِخْوَانِنَا فِي الدِّيْنِ وَلِأَصْحَابِنَا وَلِمَنْ أَحَبَّنَا فِيْكَ وَلِجَمِيْعِ الْمُؤْمِنِيْنَ وَالْمُؤْمِنَاتِ وَالْمُسْلِمِيْنَ وَالْمُسْلِمَاتِ يَا رَبَّ الْعَالَمِيْنَ. وَصَلِّ اَللَّهُمَّ عَلَى جَمَالِكَ الْأَكْمَلِ وَنُوْرِكَ الْأَجْمَلِ سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِهِ وَصَحْبِهِ وَسَلِّمْ وَالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِيْنَ.", lat: "Bismillahirrahmanirrahim. Alhamdu lillahi rabbil 'alamin. Hamdan yuwafi ni'amahu wa yukafi'u mazidah. Ya Rabbana lakal hamdu kama yanbaghi lijalali wajhika wa 'adzimi sulthanik. Subhanaka la nuhshi tsana'an 'alaika anta kama atsnaita 'ala nafsika. Falakal hamdu hatta tardha, walakal hamdu idza radhita, walakal hamdu ba'dar ridha. Allahumma shalli wa sallim 'ala sayyidina muhammadin fil awwalin. Wa shalli wa sallim 'ala sayyidina muhammadin fil akhirin. Wa shalli wa sallim 'ala sayyidina muhammadin fi kulli waqtin wahin. Wa shalli wa sallim 'ala sayyidina muhammadin fil mala'il a'la ila yawmid din. Wa shalli wa sallim 'ala sayyidina muhammadin hatta taritsal ardha wa man 'alaiha wa anta khairul waritsin. Allahumma inna nastahfidzhuka wa nastaudi'uka adyanana wa anfusana wa amwalana wa ahlana wa kulla syai'in a'thaitana. Allahummaj'alna wa iyyahum fi kanafika wa amanika wa 'iyadzika min kulli syaithanim marid, wa jabbarin 'anid, wa dzi 'ainin wa dzi baghyin wa dzi hasadin wa min syarri kulli dzi syarr, innaka 'ala kuli syai'in qadir. Allahumma jammilna bil 'afiyati was salamah. Wa haqqiqna bit taqwa wal istiqamah. Wa a'idzna min mujibatin nadamah, innaka sami'ud du'a. Allahummaghfir lana waliwalidina waliauladina walimasyayikhina wali-ikhwanina fiddini wali-ashhabina waliman ahabba-na fika walijami'il mu'minina wal mu'minati wal muslimina wal muslimati ya rabbal 'alamin. Washallillahumma 'ala jamalikal akmali wanurikal ajmali sayyidina muhammadin wa 'ala alihi wa shahbihi wa sallim walhamdu lillahi rabbil 'alamin.", id: "31. Doa Penutup" }
-                ]
-            },
-            "ratib-alhaddad": {
-                title: "Ratib Al-Haddad",
-                desc: "Wirid utama karya Al-Habib Abdullah bin Alwi Al-Haddad.",
-                tag: "POPULER",
-                content: [
-                    { ar: "اَلْفَاتِحَةُ اِلَى حَضْرَةِ النَّبِيِّ مُحَمَّدٍ صَلَّى اللهُ عَلَيْهِ وَآلِهِ وَسَلَّمَ", lat: "Al-Fatihah ila hadhratin-Nabiyyi Muhammadin shallallahu 'alaihi wa alihi wa sallam.", id: "1. Tawassul" },
-                    { ar: "اَللهُ لَا اِلَهَ اِلَّا هُوَ الْحَيُّ الْقَيُّوْمُ لَا تَاْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَهُ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهُ اِلَّا بِاِذْنِهِ يَعْلَمُ مَا بَيْنَ اَيْدِيْهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهِ اِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْاَرْضَ وَلَا يَـُٔوْدُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيْمُ", lat: "Allahu la ilaha illa huwal hayyul qayyum, la ta'khudzuhu sinatun wala naum, lahu ma fis samawati wa ma fil ardhi...", id: "2. Ayat Kursi" }
-                ]
-            }
-        };
-
-        let state = { view: 'home', zoom: 100, latin: true, meaning: true, currentData: [] };
+        let state = { zoom: 100, latin: true, currentId: null };
 
         window.onload = () => {
-            renderGrid(Object.keys(APP_DATA).map(key => ({ id: key, ...APP_DATA[key] })));
-            updateUI();
+            renderHome(PRAYER_LIST);
         };
 
-        function renderGrid(data) {
-            const grid = document.getElementById('prayer-grid');
+        function renderHome(data) {
+            const grid = document.getElementById('view-home');
             grid.innerHTML = data.map(item => `
-                <div onclick="openReader('${item.id}')" class="bg-white p-7 rounded-[2.2rem] border border-slate-100 card-shadow hover:translate-y-[-4px] active:scale-95 transition-all cursor-pointer group relative overflow-hidden">
-                    <div class="mb-5">
-                        <span class="text-[9px] font-black bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full tracking-widest uppercase font-sans">${item.tag}</span>
-                    </div>
-                    <h3 class="text-xl font-extrabold text-slate-800 mb-2 group-hover:text-emerald-700 transition-colors tracking-tight uppercase">${item.title}</h3>
-                    <p class="text-xs text-slate-400 font-medium leading-relaxed line-clamp-2">${item.desc}</p>
+                <div onclick="openReader('${item.id}')" class="bg-white p-7 rounded-[2rem] border border-slate-100 card-shadow hover:translate-y-[-5px] active:scale-95 transition-all cursor-pointer group">
+                    <div class="mb-4"><span class="text-[9px] font-black bg-emerald-50 text-emerald-700 px-3 py-1.5 rounded-full uppercase tracking-widest">${item.tag}</span></div>
+                    <h3 class="text-xl font-extrabold text-slate-800 mb-2 group-hover:text-emerald-700 uppercase tracking-tight">${item.title}</h3>
+                    <p class="text-xs text-slate-400 line-clamp-2">${item.desc}</p>
                 </div>
             `).join('');
         }
 
         function handleSearch() {
-            const input = document.getElementById('search-input');
-            const clearBtn = document.getElementById('btn-clear');
-            const q = input.value.toLowerCase();
-            clearBtn.classList.toggle('hidden', q.length === 0);
-            
-            const filtered = Object.keys(APP_DATA)
-                .filter(key => APP_DATA[key].title.toLowerCase().includes(q) || APP_DATA[key].desc.toLowerCase().includes(q))
-                .map(key => ({ id: key, ...APP_DATA[key] }));
-            
-            renderGrid(filtered);
+            const q = document.getElementById('search-input').value.toLowerCase();
+            document.getElementById('btn-clear').classList.toggle('hidden', q.length === 0);
+            renderHome(PRAYER_LIST.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q)));
         }
 
         function clearSearch() {
-            const input = document.getElementById('search-input');
-            input.value = "";
+            document.getElementById('search-input').value = "";
             handleSearch();
-            input.focus();
+            document.getElementById('search-input').focus();
         }
 
         function openReader(id) {
-            const item = APP_DATA[id];
-            state.currentData = item.content;
+            state.currentId = id;
+            const meta = PRAYER_LIST.find(p => p.id === id);
+            // Mengambil variabel data global (RATIB_ALATTAS_DATA atau RATIB_ALHADDAD_DATA)
+            const content = window[meta.dataVar];
 
             document.getElementById('view-home').classList.add('hidden');
             document.getElementById('search-section').classList.add('hidden');
@@ -227,30 +139,26 @@
             document.getElementById('reader-controls').classList.remove('hidden');
             
             document.getElementById('header-action').innerHTML = `
-                <button onclick="goHome()" class="p-2 -ml-2 hover:bg-emerald-600 rounded-full transition-all active:scale-50 text-white">
+                <button onclick="goHome()" class="p-2 -ml-2 hover:bg-emerald-600 rounded-full text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                 </button>
-                <h1 class="font-bold text-sm tracking-tight uppercase truncate max-w-[200px] text-white">${item.title}</h1>
+                <h1 class="font-bold text-sm tracking-tight uppercase truncate max-w-[180px] text-white">${meta.title}</h1>
             `;
 
-            renderContent();
+            renderContent(content);
             window.scrollTo(0,0);
         }
 
-        function renderContent() {
+        function renderContent(data) {
             const container = document.getElementById('reader-content');
-            container.innerHTML = `<div class="space-y-24 py-10">` + state.currentData.map((item, idx) => `
-                <div class="reading-block space-y-8 px-1">
+            container.innerHTML = `<div class="space-y-24 py-10">` + data.map(item => `
+                <div class="reading-item space-y-7 px-1">
+                    <div class="section-label"><span class="inline-block px-4 py-1.5 bg-emerald-50 text-emerald-800 text-[10px] font-black rounded-xl uppercase tracking-widest shadow-sm">${item.title}</span></div>
                     <div class="arabic-text text-slate-800" style="font-size: ${1.95 * (state.zoom/100)}rem">${item.ar}</div>
-                    <div class="space-y-4">
-                        <div class="latin-text text-emerald-700 font-bold italic leading-relaxed" style="font-size: ${1 * (state.zoom/100)}rem">${item.lat}</div>
-                        <div class="meaning-text text-slate-500 font-medium leading-relaxed" style="font-size: ${0.9 * (state.zoom/100)}rem">
-                            <span class="bg-slate-200/50 px-2.5 py-1 rounded-lg text-[10px] font-black text-slate-400 mr-2 font-sans">${idx+1}</span>${item.id}
-                        </div>
-                    </div>
+                    <div class="latin-text text-emerald-700 font-bold italic leading-relaxed" style="font-size: ${1 * (state.zoom/100)}rem">${item.lat}</div>
                 </div>
             `).join('') + `</div>`;
-            updateUI();
+            updateUIState();
         }
 
         function goHome() {
@@ -258,33 +166,18 @@
             document.getElementById('search-section').classList.remove('hidden');
             document.getElementById('view-reader').classList.add('hidden');
             document.getElementById('reader-controls').classList.add('hidden');
-            document.getElementById('header-action').innerHTML = `<h1 class="font-extrabold text-lg tracking-tight uppercase text-white">DOA & RATIB</h1>`;
+            document.getElementById('header-action').innerHTML = `<h1 class="font-extrabold text-lg tracking-tight uppercase text-white" onclick="goHome()">DOA & RATIB</h1>`;
             window.scrollTo(0,0);
         }
 
-        function toggleFeature(type) {
-            if (type === 'latin') state.latin = !state.latin;
-            if (type === 'meaning') state.meaning = !state.meaning;
-            updateUI();
-        }
-
-        function changeZoom(delta) {
-            state.zoom = Math.min(Math.max(state.zoom + delta, 60), 250);
-            renderContent();
-        }
-
-        function updateUI() {
-            const container = document.getElementById('reader-content');
-            if (container) {
-                container.classList.toggle('hide-latin', !state.latin);
-                container.classList.toggle('hide-meaning', !state.meaning);
-            }
-            document.getElementById('toggle-latin').className = `flex-1 py-3.5 rounded-[1.7rem] text-[10px] font-extrabold tracking-widest transition-all font-sans ${state.latin ? 'toggle-active' : 'text-slate-400 bg-slate-100'}`;
-            document.getElementById('toggle-meaning').className = `flex-1 py-3.5 rounded-[1.7rem] text-[10px] font-extrabold tracking-widest transition-all font-sans ${state.meaning ? 'toggle-active' : 'text-slate-400 bg-slate-100'}`;
+        function toggleLatin() { state.latin = !state.latin; updateUIState(); }
+        function changeZoom(delta) { state.zoom = Math.min(Math.max(state.zoom + delta, 60), 250); const meta = PRAYER_LIST.find(p => p.id === state.currentId); renderContent(window[meta.dataVar]); }
+        function updateUIState() {
+            document.getElementById('reader-content').classList.toggle('hide-latin', !state.latin);
+            document.getElementById('btn-latin-toggle').classList.toggle('btn-toggle-active', state.latin);
             document.getElementById('zoom-text').innerText = state.zoom + '%';
         }
     </script>
 </body>
 </html>
-
 
