@@ -14,13 +14,13 @@ const PRAYER_LIST = [
         title: "Ratib Al-Attas",
         desc: "Karya Al-Habib Umar bin Abdurrahman Al-Attas (Lengkap 31 Bagian).",
         tag: "VER 1.0",
-        dataVar: "RATIB_ALATTAS_DATA"
+        dataVar: "ratib-alattas.js"
     },
     {
         id: "ratib-alhaddad",
         title: "Ratib Al-Haddad",
         desc: "Zikir utama karya Al-Imam Al-Habib Abdullah bin Alwi Al-Haddad (Lengkap 32 Bagian).",
         tag: "VER 1.0",
-        dataVar: "RATIB_ALHADDAD_DATA"
+        dataVar: "ratib-alhaddad.js"
     }
 ];
